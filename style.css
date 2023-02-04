@@ -1,0 +1,149 @@
+:root {
+  --bg-primary-color: #f2ebe9;
+  --bg-secondary-color: #eddcd9;
+  --bg-green: #244244;
+  --bg-header: #e99f4c;
+  --font-color: dimgray;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  scroll-behavior: smooth;
+  scroll-snap-align: 15vh;
+}
+
+body {
+  margin: 0;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.header {
+  height: 15vh;
+  padding: .25rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-header);
+  text-align: center;
+  color: rgb(246, 236, 216);
+
+}
+
+.header>h1 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 2.5rem;
+}
+
+.nav-bar>a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.nav-bar>a:hover {
+  opacity: 80%;
+}
+
+.slide {
+  padding: 1rem;
+  width: 100%;
+  min-height: 85vh;
+  background-color: var(--bg-primary-color);
+  color: dimgray;
+}
+
+.slide:nth-child(even) {
+  background-color: var(--bg-secondary-color);
+}
+
+.slide>h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  /*     border: 2px solid black; */
+}
+
+.slide>p {
+  margin-left: 1rem;
+  /*   border: 2px solid black; */
+}
+
+
+[id] {
+  scroll-margin-top: 15vh;
+  /* background-color: coral; */
+}
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 50%;
+  height: auto;
+}
+
+.footer{
+  width: 100%;
+  height: 6vh;
+  padding: 1vh;
+  background-color: var(--bg-header);
+
+}
+
+.footer>nav{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  
+}
+
+.footer>nav a{
+  text-decoration: none;
+  color: var(--bg-green);
+}
+
+.footer>nav a:hover{
+  color: #335f62;
+}
+
+
+.top-btn {
+  width: 6vh;
+  height: 6vh;
+  background-color: lightcoral;
+  color: var(--bg-secondary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  transition: transform 400ms ease-in-out;
+
+}
+
+.top-btn:hover {
+  cursor: pointer;
+  background-color: coral;
+}
+
+.is-active {
+  /*   visibility: hidden; */
+  transform: translateY(calc(6vh + 1rem));
+}
